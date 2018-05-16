@@ -72,15 +72,15 @@ module.exports = {
     preCSS: {
       when: 'isNotTest',
       type: 'list',
-      message: 'Pick a pre-CSS compiler',
+      message: 'Pick a CSS pre-processor',
       choices: [
         {
-          name: 'scss (https://github.com/standard/standard)',
+          name: 'scss (https://sass-lang.com/)',
           value: 'scss',
           short: 'scss'
         },
         {
-          name: 'less ()',
+          name: 'less (http://lesscss.org/)',
           value: 'less',
           short: 'less'
         },
@@ -195,7 +195,7 @@ module.exports = {
   },
   complete: function(data, { chalk }) {
     const green = chalk.green
-
+console.log(data)
     sortDependencies(data, green)
 
     const cwd = path.join(process.cwd(), data.inPlace ? '' : data.destDirName)

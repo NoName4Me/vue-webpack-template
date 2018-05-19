@@ -32,10 +32,10 @@
     {{#if_eq preCSS "scss"}}
     "node-sass": "^4.9.0",
     "sass-loader": "^7.0.1",
-    {{/preCSS}}
+    {{/if_eq}}
     {{#if_eq preCSS "less"}}
     "less-loader": "^4.1.0"
-    {{/preCSS}}
+    {{/if_eq}}
     {{#lint}}
     "babel-eslint": "^8.2.1",
     "eslint": "^4.15.0",
